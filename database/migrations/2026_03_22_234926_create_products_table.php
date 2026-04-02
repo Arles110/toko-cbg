@@ -13,9 +13,10 @@ return new class extends Migration
 {
     Schema::create('products', function (Blueprint $table) {
         $table->id();
-        $table->text('name'); // Pakai text karena hasil AES itu panjang
-        $table->integer('price');
-        $table->integer('stock');
+        $table->text('name');  // OK
+        $table->text('price'); // UBAH DARI integer KE text
+        $table->text('stock'); // UBAH DARI integer KE text
+        $table->double('encryption_time')->nullable(); // TAMBAHKAN INI agar tidak error di Controller
         $table->timestamps();
     });
 }
