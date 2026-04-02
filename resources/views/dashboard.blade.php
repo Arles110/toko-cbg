@@ -14,13 +14,13 @@
 <nav class="navbar">
     {{-- BAGIAN LOGO: Dipastikan hanya satu teks --}}
     <div style="display: flex; align-items: center; gap: 12px;">
-            <img src="{{ asset('img/logo.png') }}" alt="Logo" style="height: 35px; width: auto;">
-        @else
-            <i class="fa-solid fa-store" style="font-size: 22px; color: #f1c40f;"></i>
-        @endif
-        
-        <h2 style="margin: 0; font-weight: bold; letter-spacing: 1px;">Toko CBG</h2>
-    </div>
+    <img src="{{ asset('img/logo.png') }}" alt="Logo" style="height: 35px; width: auto;" 
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+    
+    <i class="fa-solid fa-store" style="font-size: 22px; color: #f1c40f; display:none;"></i>
+
+    <h2 style="margin: 0; font-weight: bold; letter-spacing: 1px;">Toko CBG</h2>
+</div>
     
     <div>
         <span>Halo, <strong>{{ auth()->user()->name }}</strong> 
