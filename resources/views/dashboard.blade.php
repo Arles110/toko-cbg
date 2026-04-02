@@ -14,8 +14,7 @@
 <nav class="navbar">
     {{-- BAGIAN LOGO: Dipastikan hanya satu teks --}}
     <div style="display: flex; align-items: center; gap: 12px;">
-            <img src="{{ asset('img/logo.png') }}" alt="Logo" style="height: 35px; width: auto;"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+            <img src="{{ asset('img/logo.png') }}" alt="Logo" style="height: 35px; width: auto;">
         @else
             <i class="fa-solid fa-store" style="font-size: 22px; color: #f1c40f;"></i>
         @endif
